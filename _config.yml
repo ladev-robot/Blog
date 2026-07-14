@@ -25,9 +25,9 @@ source_url: https://github.com/
 last_updated: April 2026
 
 # Images
-logo: /assets/img/avatar.png
-avatar: /assets/img/avatar.png
-avatar_2x: /assets/img/avatar@2x.png
+logo: /assets/img/logo.png
+avatar: /assets/img/profile.png
+avatar_2x: /assets/img/profile-2x.png
 favicon: /assets/img/favicon.png
 favicon_dark: /assets/img/favicon-dark.png
 
