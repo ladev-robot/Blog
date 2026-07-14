@@ -34,23 +34,10 @@
   font-size: 1.05rem;
   color: #1a1a1a !important;
   text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .top-nav-brand:hover {
   color: #0066cc !important;
-}
-
-.site-logo {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: block;
-  flex: 0 0 28px;
-  object-fit: cover;
-  object-position: center 18%;
 }
 
 .top-nav-links {
