@@ -1,0 +1,55 @@
+<section class="about-block" id="about">
+  <div class="about-text">
+    <h1 class="about-name">{{ site.title }}{% if site.name_ipa and site.name_ipa != "" %} <span class="about-ipa">{{ site.name_ipa }}</span>{% endif %}</h1>
+    {% if site.position or site.affiliation %}
+    <p class="about-meta">
+      {% if site.position %}{{ site.position }}{% endif %}{% if site.position and site.affiliation %}, {% endif %}
+      {% if site.affiliation %}
+        {% if site.affiliation_link %}
+        <a href="{{ site.affiliation_link }}" rel="noopener">{{ site.affiliation }}</a>
+        {% else %}
+        {{ site.affiliation }}
+        {% endif %}
+      {% endif %}
+    </p>
+    {% endif %}
+    <div class="about-bio">
+      {{ include.bio | strip }}
+    </div>
+    <p class="about-links">
+      {% if site.email_link %}
+      <a class="about-link" href="mailto:{{ site.email_link }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
+      {% elsif site.email %}
+      <span><i class="fa-solid fa-envelope" aria-hidden="true"></i> {{ site.email }}</span>
+      {% endif %}
+      {% if site.google_scholar %}
+      <span class="sep">|</span>
+      <a class="about-link" href="{{ site.google_scholar }}" target="_blank" rel="noopener"><i class="ai ai-google-scholar" aria-hidden="true"></i> Google Scholar</a>
+      {% endif %}
+      {% if site.github_link %}
+      <span class="sep">|</span>
+      <a class="about-link" href="{{ site.github_link }}" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+      {% endif %}
+      {% if site.zhihu %}
+      <span class="sep">|</span>
+      <a class="about-link" href="{{ site.zhihu }}" target="_blank" rel="noopener"><i class="fa-brands fa-zhihu" aria-hidden="true"></i> 知乎</a>
+      {% endif %}
+      {% if site.linkedin %}
+      <span class="sep">|</span>
+      <a class="about-link" href="{{ site.linkedin }}" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+      {% endif %}
+    </p>
+  </div>
+  {% if site.avatar %}
+  <div class="about-photo">
+    <img
+      src="{{ '/assets/img/avatar.png' | relative_url }}"
+      srcset="{{ '/assets/img/avatar.png' | relative_url }} 1x, {{ '/assets/img/avatar@2x.png' | relative_url }} 2x"
+      width="220"
+      height="220"
+      alt="{{ site.title }}"
+      decoding="async"
+    />
+  </div>
+  {% endif %}
+</section>

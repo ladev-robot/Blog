@@ -1,0 +1,24 @@
+{% if include.show_heading != false %}
+<h2 id="highlight">Highlight</h2>
+{% endif %}
+
+<div class="highlights-list">
+{% for item in site.data.highlights %}
+  <article class="highlight-item">
+    <h3>{{ item.title }}</h3>
+    <p>{{ item.summary }}</p>
+    {% if item.links and item.links.size > 0 %}
+    <p class="highlight-links">
+      {% for link in item.links %}
+      <a href="{{ link.url }}" target="_blank" rel="noopener">[{{ link.label }}]</a>{% unless forloop.last %} {% endunless %}
+      {% endfor %}
+    </p>
+    {% endif %}
+    {% if item.media %}
+      {% for media in item.media %}
+      <img class="highlight-image" src="{{ media | relative_url }}" alt="">
+      {% endfor %}
+    {% endif %}
+  </article>
+{% endfor %}
+</div>

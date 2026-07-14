@@ -1,51 +1,61 @@
-<h2 id="publications" style="margin: 2px 0px -15px;">Publications</h2>
+{% if include.show_heading != false %}
+<h2 id="publications">Publications</h2>
+{% endif %}
 
 <div class="publications">
-<ol class="bibliography">
-
 {% for link in site.data.publications.main %}
-
-<li>
 <div class="pub-row">
-  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-    {% if link.image %} 
-    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" style="width=100;height=40%">
-    {% if link.conference_short %} 
-    <abbr class="badge">{{ link.conference_short }}</abbr>
-    {% endif %}
+  <div class="pub-teaser">
+    {% if link.image %}
+    <img src="{{ link.image | relative_url }}" class="teaser" alt="">
     {% endif %}
   </div>
-  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
-      <div class="title"><a href="{{ link.pdf }}">{{ link.title }}</a></div>
-      <div class="author">{{ link.authors }}</div>
-      <div class="periodical"><em>{{ link.conference }}</em>
-      </div>
+  <div class="pub-meta">
+    <div class="title"><strong>{{ link.title }}</strong></div>
+    <div class="author">{{ link.authors }}</div>
+    {% if link.conference %}
+    <div class="periodical"><em>{{ link.conference }}</em></div>
+    {% endif %}
     <div class="links">
-      {% if link.pdf %} 
-      <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
+      {% assign sep = false %}
+      {% if link.pdf %}
+        {% if sep %}<span class="link-sep">|</span>{% endif %}
+        <a href="{{ link.pdf | relative_url }}" target="_blank" rel="noopener">PDF</a>{% assign sep = true %}
       {% endif %}
-      {% if link.code %} 
-      <a href="{{ link.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
+      {% if link.arxiv %}
+        {% if sep %}<span class="link-sep">|</span>{% endif %}
+        <a href="{{ link.arxiv }}" target="_blank" rel="noopener">arXiv</a>{% assign sep = true %}
       {% endif %}
-      {% if link.page %} 
-      <a href="{{ link.page }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project Page</a>
+      {% if link.venue_link %}
+        {% if sep %}<span class="link-sep">|</span>{% endif %}
+        <a href="{{ link.venue_link }}" target="_blank" rel="noopener">{{ link.venue_label | default: "PDF" }}</a>{% assign sep = true %}
       {% endif %}
-      {% if link.bibtex %} 
-      <a href="{{ link.bibtex }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
+      {% if link.video %}
+        {% if sep %}<span class="link-sep">|</span>{% endif %}
+        <a href="{{ link.video }}" target="_blank" rel="noopener">video</a>{% assign sep = true %}
       {% endif %}
-      {% if link.notes %} 
-      <strong> <i style="color:#e74d3c">{{ link.notes }}</i></strong>
+      {% if link.bilibili %}
+        {% if sep %}<span class="link-sep">|</span>{% endif %}
+        <a href="{{ link.bilibili }}" target="_blank" rel="noopener">bilibili</a>{% assign sep = true %}
       {% endif %}
-      {% if link.others %} 
-      {{ link.others }}
+      {% if link.page %}
+        {% if sep %}<span class="link-sep">|</span>{% endif %}
+        <a href="{{ link.page }}" target="_blank" rel="noopener">project</a>{% assign sep = true %}
+      {% endif %}
+      {% if link.code %}
+        {% if sep %}<span class="link-sep">|</span>{% endif %}
+        <a href="{{ link.code }}" target="_blank" rel="noopener">code</a>{% assign sep = true %}
+      {% endif %}
+      {% if link.bibtex %}
+        {% if sep %}<span class="link-sep">|</span>{% endif %}
+        <a href="{{ link.bibtex }}" target="_blank" rel="noopener">bibtex</a>{% assign sep = true %}
+      {% endif %}
+      {% if link.others %}
+        {% if sep %}<span class="link-sep">|</span>{% endif %}
+        {{ link.others }}
       {% endif %}
     </div>
   </div>
 </div>
-</li>
-<br>
-
 {% endfor %}
-
-</ol>
 </div>

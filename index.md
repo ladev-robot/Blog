@@ -1,23 +1,37 @@
 ---
 layout: homepage
+title: Home
+permalink: /
 ---
 
-## About Me
+{% capture about_bio %}
+<p>
+I am a Navigation Algorithm Engineer at the
+<a href="https://www.jhatc.cn/" target="_blank" rel="noopener">Jianghuai Laboratory</a>,
+advised by
+<a href="https://www.bnrist.tsinghua.edu.cn/info/1229/3909.htm" target="_blank" rel="noopener">Prof. Lu Weining</a>.
+</p>
+<p>
+Before that, I received my Master's degree from
+<a href="https://bigdata.ahu.edu.cn/" target="_blank" rel="noopener">CosineLab</a>
+at Anhui University, supervised by 
+<a href="https://cs.ahu.edu.cn/2021/1216/c20807a277191/page.htm" target="_blank" rel="noopener">Prof. Wang Qingren</a>.
+</p>
+<p>
+My research interests lie in unmanned systems and autonomous navigation, with a focus on:
+</p>
+<ul class="about-interests">
+  <li>End-to-end planning</li>
+  <li>Trajectory optimization</li>
+  <li>Vision-and-Language Navigation (VLN)</li>
+</ul>
+{% endcapture %}
+{% include about.html bio=about_bio %}
 
-I am a Ph.D. student at ...
+{% include publications.md %}
 
-## Research Interests
+{% include education.html %}
 
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+{% include honors.html %}
 
-## News
-
-- **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
-- **[Sept. 2019]** Our paper about few-shot learning is accepted to NeurIPS 2019.
-- **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019.
-
-{% include_relative _includes/publications.md %}
-
-{% include_relative _includes/services.md %}
+{% include experience.html %}

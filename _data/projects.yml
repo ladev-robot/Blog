@@ -1,0 +1,20 @@
+- title: Example Mapping System
+  summary: >
+    A scalable mapping framework for mobile robots in large-scale environments.
+    Replace this placeholder with your own project description, sensors, and results.
+  link: https://github.com/
+  image:
+
+- title: Example Localization Pipeline
+  summary: >
+    Robust localization combining lidar, vision, and inertial sensing.
+    Add links to code, videos, or project pages as needed.
+  link: https://github.com/
+  image:
+
+- title: Example Dataset / Benchmark
+  summary: >
+    A public dataset or benchmark you released for the community.
+    Include download links and baseline results when ready.
+  link: https://github.com/
+  image:

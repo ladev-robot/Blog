@@ -1,7 +1,20 @@
 body {
-    background-color: #fff;
-    padding:50px;
-    font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    color:#595959;
-    font-weight:400;
-  }
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  /* Match https://qiaozhijian.github.io — Lato for Latin, Noto Serif SC for CJK */
+  font-family: "Lato", Verdana, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.about-name,
+.top-nav-brand,
+.site-footer {
+  font-family: "Lato", "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif;
+}

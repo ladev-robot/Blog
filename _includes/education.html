@@ -1,0 +1,9 @@
+<h2 id="education">Education</h2>
+<ul class="plain-list education-list">
+{% for item in site.data.education %}
+  <li>
+    <strong>{{ item.degree }}</strong>, {{ item.school }}, {{ item.years }}
+    {% if item.detail %}<br><span class="muted">{{ item.detail }}</span>{% endif %}
+  </li>
+{% endfor %}
+</ul>

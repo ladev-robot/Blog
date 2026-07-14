@@ -1,0 +1,25 @@
+<nav class="top-nav" aria-label="Primary">
+  <div class="top-nav-inner">
+    <a class="top-nav-brand" href="{{ '/' | relative_url }}">
+      <img class="site-logo" src="{{ '/assets/img/avatar.png' | relative_url }}" srcset="{{ '/assets/img/avatar.png' | relative_url }} 1x, {{ '/assets/img/avatar@2x.png' | relative_url }} 2x" width="28" height="28" alt="{{ site.title }}" />
+      <span>{{ site.title }}</span>
+    </a>
+    <ul class="top-nav-links">
+      {% for item in site.data.navigation %}
+      {% assign item_path = item.url | relative_url %}
+      {% assign item_index = item.url | append: 'index.html' %}
+      {% assign is_active = false %}
+      {% if item.url == '/' %}
+        {% if page.url == '/' or page.url == '/index.html' %}
+          {% assign is_active = true %}
+        {% endif %}
+      {% elsif page.url == item.url or page.url == item_index %}
+        {% assign is_active = true %}
+      {% endif %}
+      <li>
+        <a href="{{ item_path }}"{% if is_active %} class="active" aria-current="page"{% endif %}>{{ item.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,14 @@
+<h2 id="experience">Experience</h2>
+<ul class="plain-list experience-list">
+{% for item in site.data.experience %}
+  <li>
+    <strong>{{ item.title }}</strong>,
+    {% if item.org_link %}
+    <a href="{{ item.org_link }}" target="_blank" rel="noopener">{{ item.org }}</a>
+    {% else %}
+    {{ item.org }}
+    {% endif %}{% if item.years %}, {{ item.years }}{% endif %}
+    {% if item.detail %}<br><span class="muted">{{ item.detail }}</span>{% endif %}
+  </li>
+{% endfor %}
+</ul>

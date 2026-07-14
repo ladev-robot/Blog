@@ -1,0 +1,16 @@
+- title: Example Highlight — Competition Champion
+  summary: >
+    Describe a highlight such as a robot competition result, demos, or media coverage.
+    You can add photos and external links below.
+  links:
+    - label: link
+      url: https://example.com
+  media: []
+
+- title: Example Highlight — Open-Source Impact
+  summary: >
+    Another highlight entry. Use this page for longer stories that do not fit the résumé sections on Home.
+  links:
+    - label: code
+      url: https://github.com/
+  media: []
