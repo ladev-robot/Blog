@@ -1,12 +1,12 @@
 # Basic Information
 title: Leo
-name_zh:
+name_zh: 刘奥
 name_ipa: ""
 position: Navigation Algorithm Engineer
 affiliation: Jianghuai Laboratory
 affiliation_link: https://www.jhatc.cn/
-email: yourname (at) example.edu
-email_link: yourname@example.edu
+email: leo.liu.ao@gmail.com
+email_link: leo.liu.ao@gmail.com
 
 # Search Engine Optimization (SEO)
 keywords: academic homepage, robotics, research
@@ -15,11 +15,11 @@ canonical:
 
 # Links
 google_scholar: https://scholar.google.com/
-github_link: https://github.com/
-zhihu: https://www.zhihu.com/
+github_link: https://github.com/ladev-robot
+zhihu: https://www.zhihu.com/people/qiu-xue-lu-shang-de-xiao-bai
 linkedin:
 twitter:
-source_url: https://github.com/
+source_url: https://github.com/ladev-robot/ladev-robot.github.io
 
 # Footer
 last_updated: April 2026
